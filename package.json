@@ -1,11 +1,11 @@
 {
-  "name": "professional-portfolio",
+  "name": "jidb-2026",
   "version": "1.0.0",
-  "description": "A modern, responsive web portfolio template for showcasing projects and skills",
+  "description": "A modern, responsive web portfolio for JIDB_2026",
   "main": "index.html",
   "scripts": {
     "start": "http-server -p 8000 -o",
-    "build": "echo 'Add your build script here'",
+    "build": "echo 'No build step configured yet'",
     "serve": "python -m http.server 8000"
   },
   "keywords": [
@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/portfolio.git"
+    "url": "https://github.com/belinojose19-coder/JIDB_2026.git"
   },
   "bugs": {
-    "url": "https://github.com/yourusername/portfolio/issues"
+    "url": "https://github.com/belinojose19-coder/JIDB_2026/issues"
   },
-  "homepage": "https://github.com/yourusername/portfolio#readme"
+  "homepage": "https://github.com/belinojose19-coder/JIDB_2026#readme"
 }
