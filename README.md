@@ -1,223 +1,132 @@
-# Professional Web Portfolio
+# JIDB Portfolio
 
-A modern, responsive, and professional web portfolio template designed for showcasing your projects, skills, and experience to potential employers and clients.
+A modern personal portfolio built for Jose Isabelo D. Belino, featuring a vibrant green dark theme, animated Lordicon icons, and a responsive layout for industry-ready presentation.
 
-## 🌟 Features
+## 🌟 What’s Included
 
-- **Responsive Design** - Mobile-first approach with desktop optimization
-- **Modern UI/UX** - Clean and professional interface with smooth animations
-- **SEO Optimized** - Semantic HTML and meta tags for better search engine visibility
-- **Contact Form** - Fully functional contact form with validation
-- **Mobile Navigation** - Hamburger menu for mobile devices
-- **Scroll Effects** - Fade-in animations as you scroll
-- **Social Links** - Easy integration with social media profiles
-- **Project Showcase** - Grid layout for displaying your best work
-- **Skills Section** - Organized presentation of technical skills
-- **Dark/Light Theme Ready** - CSS variables for easy theme customization
+- **Green dark theme** with rich green accents and dim backgrounds
+- **Responsive layout** optimized for mobile, tablet, and desktop
+- **Hero, About, Skills, Core Development, Contact** sections
+- **Lordicon animated icons** for skills, projects, and social links
+- **Contact form validation** with JavaScript feedback
+- **Mobile menu** and smooth scroll navigation
+- **Plain text phone display** for a cleaner contact layout
 
 ## 📁 Project Structure
 
 ```
-portfolio/
-├── index.html              # Main HTML file
+JIDB_2026/
+├── index.html             # Main portfolio page
 ├── css/
-│   └── styles.css         # Main stylesheet with responsive design
+│   └── styles.css         # Styling and dark green theme
 ├── js/
-│   └── script.js          # Interactive features and form handling
+│   └── script.js          # Mobile menu, form validation, scroll effects
 ├── assets/
-│   ├── images/            # Project images and visuals
-│   └── icons/             # SVG icons and graphics
-├── projects/              # Additional project pages (optional)
-├── README.md              # This file
+│   └── images/            # Portfolio images used on the site
+├── README.md              # Project documentation
+├── QUICKSTART.md          # Quick start guide
 └── LICENSE                # License information
 ```
 
-## 🚀 Quick Start
+## 🚀 Getting Started
 
 ### Prerequisites
-- A modern web browser (Chrome, Firefox, Safari, Edge)
-- A code editor (VS Code recommended)
-- Optional: Node.js and npm for development server
+- Modern browser (Chrome, Edge, Firefox, Safari)
+- Code editor such as VS Code
+- Optional: Python for local server
 
-### Installation
+### Run Locally
 
-1. **Clone or Download** the repository
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-   ```
+1. Open the project folder.
+2. Open `index.html` directly in the browser, or run a local server.
 
-2. **Customize Content**
-   - Open `index.html` in your editor
-   - Replace "Your Name" with your actual name
-   - Update email and contact information
-   - Customize project descriptions and images
+```bash
+# Python 3
+python -m http.server 8000
+```
 
-3. **Add Your Assets**
-   - Place project images in `assets/images/`
-   - Add social media profile links in the contact section
-   - Update meta tags for SEO
+3. Visit `http://localhost:8000`
 
-4. **Run Locally**
-   - Option 1: Open `index.html` directly in your browser
-   - Option 2: Use a local server
-     ```bash
-     # Python 3
-     python -m http.server 8000
-     
-     # Node.js
-     npx http-server
-     ```
+## ✏️ Update Your Content
 
-## 🎨 Customization
+Open `index.html` and update the following sections:
 
-### Colors
-Edit CSS variables in `css/styles.css`:
+- **Hero**: name, subtitle, call-to-action button
+- **About**: biography, teaching experience, background, skills
+- **Skills**: professional, technical, language categories
+- **Core Development**: project cards for instruction, web development, and mentoring
+- **Contact**: email, phone, location, and social links
+
+### Current Section IDs
+
+- `#home` — Hero
+- `#about` — About
+- `#skills` — Skills
+- `#core` — Core Development
+- `#contact` — Contact
+
+## 🎨 Theme Customization
+
+Customize colors in `css/styles.css`:
 
 ```css
 :root {
-    --primary-color: #0066cc;      /* Main color */
-    --secondary-color: #ff6b35;    /* Accent color */
-    --dark-color: #1a1a1a;         /* Dark text */
-    --light-color: #f5f5f5;        /* Light background */
-    --text-color: #333;            /* Regular text */
+    --primary-color: #00d4aa;
+    --secondary-color: #2ecc71;
+    --dark-color: #1a1a1a;
+    --light-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --border-color: #34495e;
 }
 ```
 
-### Content Sections
+Change fonts by updating the `font-family` in `body`, or add a Google Font link inside `index.html`.
 
-#### Hero Section
-Update the main headline and subtitle in `index.html`:
-```html
-<h1 class="hero-title">Hi, I'm Your Name</h1>
-<p class="hero-subtitle">Your Professional Title | Key Skills</p>
-```
+## 🔧 JavaScript Features
 
-#### About Section
-Replace placeholder text with your biography and professional highlights.
+The portfolio currently includes:
 
-#### Skills Section
-Add your technical skills in the grid format:
-```html
-<div class="skill-card">
-    <h3>Category</h3>
-    <ul>
-        <li>Skill 1</li>
-        <li>Skill 2</li>
-    </ul>
-</div>
-```
+- **Hamburger menu toggle** for mobile navigation
+- **Smooth scrolling** to section anchors
+- **Contact form validation** for name, email, and message
+- **Section fade-in animations** on scroll
 
-#### Projects Section
-Add your projects with descriptions:
-```html
-<article class="project-card">
-    <div class="project-image">
-        <img src="assets/images/project.jpg" alt="Project Title">
-    </div>
-    <div class="project-info">
-        <h3>Your Project Title</h3>
-        <p>Project description...</p>
-        <div class="project-tags">
-            <span class="tag">Technology</span>
-        </div>
-        <div class="project-links">
-            <a href="#" class="btn btn-secondary">View Project</a>
-            <a href="#" class="btn btn-secondary">GitHub</a>
-        </div>
-    </div>
-</article>
-```
+## 📸 Images and Assets
 
-#### Contact Section
-Update your contact information:
-```html
-<a href="mailto:your.email@example.com">your.email@example.com</a>
-<a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-<a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-```
+Place your images in `assets/images/` and update image `src` values in the project cards.
 
-## 📱 Responsive Breakpoints
+Current image files used in the portfolio:
+- `assets/images/IMG_0420.jpg`
+- `assets/images/IMG_2865.jpg`
+- `assets/images/IMG_1198.jpg`
+- `assets/images/IMG_0163.JPG`
 
-The portfolio is optimized for:
-- **Desktop**: 1200px and above
-- **Tablet**: 768px - 1199px
-- **Mobile**: Below 768px
-- **Small Mobile**: Below 480px
+## 📱 Responsive Layout
 
-## ✨ JavaScript Features
+The portfolio is built to look great at:
+- Desktop: 1200px+
+- Tablet: 768px–1199px
+- Mobile: under 768px
 
-### Mobile Menu Toggle
-Automatically handles hamburger menu on mobile devices.
-
-### Smooth Navigation
-Clicking navigation links smoothly scrolls to sections.
-
-### Form Validation
-Contact form validates:
-- Empty fields
-- Valid email format
-- Shows user feedback
-
-### Scroll Effects
-- Elements fade in as they scroll into view
-- Active navigation highlighting
-- Scroll-based animations
-
-### Notification System
-Shows success/error messages for form submissions.
-
-## 🔧 Advanced Customization
-
-### Adding More Sections
-1. Create a new section in HTML with an `id`
-2. Add navigation link pointing to the section
-3. Create corresponding CSS styles in `styles.css`
-4. Add any JavaScript interactivity in `js/script.js`
-
-### Form Integration
-To integrate with a real backend:
-1. Replace `simulateFormSubmission()` in `js/script.js`
-2. Use fetch API or FormSubmit service
-3. Update CORS headers if needed
-
-Example with FormSubmit:
-```javascript
-const form = document.getElementById('contactForm');
-form.setAttribute('action', 'https://formspree.io/f/YOUR_FORM_ID');
-```
-
-### Analytics Integration
-Add Google Analytics, Mixpanel, or similar services in the `<head>` of `index.html`.
-
-## 🌐 Deployment
+## 🔗 Deployment
 
 ### GitHub Pages
-1. Push repository to GitHub
-2. Go to Settings → Pages
-3. Select main branch as source
-4. Your site is live at `https://username.github.io/portfolio`
+1. Push the repository to GitHub.
+2. In repository Settings → Pages, select the branch.
+3. Use the generated GitHub Pages URL.
 
-### Other Hosting Options
-- **Netlify**: Connect GitHub repo for auto-deployment
-- **Vercel**: Similar to Netlify, excellent for performance
-- **Traditional Hosting**: Upload files via FTP/SFTP
-- **Firebase Hosting**: Free tier available
+### Alternatives
+- **Netlify**: automatic deploys from GitHub
+- **Vercel**: easy static site deployment
+- **FTP/SFTP hosting** for traditional hosting
 
-## 📸 Features Overview
+## ✅ Notes
 
-### Hero Section
-- Eye-catching gradient background
-- Clear call-to-action button
-- Responsive typography
+- The phone number is displayed as plain text in the contact section.
+- Lordicon icons are loaded from `https://cdn.lordicon.com/lordicon.js`.
+- The project section is named **Core Development** and uses `class="core"`.
+- The contact area includes social icon links for GitHub, LinkedIn, and email.
 
-### Project Showcase
-- Grid layout with hover effects
-- Project cards with images and descriptions
-- Technology tags for each project
-
-### Skills Section
-- Organized skill categories
 - Visual checkmark indicators
 - Hover animations
 
