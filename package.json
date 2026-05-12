@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "start": "http-server -p 8000 -o",
-    "build": "echo 'No build step configured yet'",
+    "vercel-build": "echo \"Static portfolio site: no build required\"",
     "serve": "python -m http.server 8000"
   },
   "keywords": [
