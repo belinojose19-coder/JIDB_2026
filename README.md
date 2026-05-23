@@ -210,7 +210,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check issu
 
 ## 👨‍💻 Author
 
-Your Name - [GitHub](https://github.com/yourusername) | [LinkedIn](https://linkedin.com/in/yourprofile)
+Jose Isabelo Belino - [GitHub](https://github.com/belinojose19-coder) | [LinkedIn](www.linkedin.com/in/jose-belino-684a8a314)
 
 ## 📧 Support
 

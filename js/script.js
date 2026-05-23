@@ -55,7 +55,7 @@ if (contactForm) {
             message: document.getElementById('message').value
         };
 
-        // Form validation
+        // 1. Form validation
         if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
             showNotification('Please fill in all fields', 'error');
             return;
@@ -66,24 +66,49 @@ if (contactForm) {
             return;
         }
 
+        // Get button elements for loading states
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitButton ? submitButton.textContent : 'Send Message';
+
         try {
-            // Show loading state
-            const submitButton = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
+            // 2. Show loading state
+            if (submitButton) {
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+            }
 
-            // Simulate form submission (replace with actual API call)
-            await simulateFormSubmission(formData);
+            // 3. Send data to your live Formspree endpoint
+            const response = await fetch('https://formspree.io/f/xkoebleb', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(formData)
+            });
 
-            showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-            contactForm.reset();
-
-            // Restore button
-            submitButton.textContent = originalText;
-            submitButton.disabled = false;
+            // 4. Handle response success/failure
+            if (response.ok) {
+                showNotification("Message sent successfully! I'll get back to you soon.", 'success');
+                contactForm.reset();
+            } else {
+                // Formspree returned an error status code (e.g., 400 or 500)
+                const data = await response.json();
+                if (data.hasOwnProperty('errors')) {
+                    showNotification(data.errors.map(error => error.message).join(", "), 'error');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            }
         } catch (error) {
+            // Catches network errors or thrown exceptions
             showNotification('Failed to send message. Please try again.', 'error');
+        } finally {
+            // 5. Always restore the button state regardless of success or failure
+            if (submitButton) {
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+            }
         }
     });
 }
